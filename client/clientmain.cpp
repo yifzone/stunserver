@@ -265,10 +265,10 @@ void NatBehaviorToString(NatBehavior behavior, std::string* pStr)
     switch (behavior)
     {
         case UnknownBehavior:  str="Unknown Behavior"; break;
-        case DirectMapping:  str="Direct Mapping"; break;
-        case EndpointIndependentMapping: str = "Endpoint Independent Mapping"; break;
-        case AddressDependentMapping: str = "Address Dependent Mapping"; break;
-        case AddressAndPortDependentMapping: str = "Address and Port Dependent Mapping"; break;
+        case DirectMapping:  str="Direct Mapping"; break; //直连
+        case EndpointIndependentMapping: str = "Endpoint Independent Mapping"; break; //完全锥型映射
+        case AddressDependentMapping: str = "Address Dependent Mapping"; break; //地址受限型映射
+        case AddressAndPortDependentMapping: str = "Address and Port Dependent Mapping"; break; //地址和端口受限型映射
         default: ASSERT(false); str = ""; break;
     }
 }
@@ -280,10 +280,10 @@ void NatFilteringToString(NatFiltering filtering, std::string* pStr)
     switch (filtering)
     {
         case UnknownFiltering:  str="Unknown Behavior"; break;
-        case DirectConnectionFiltering:  str="Direct Mapping"; break;
-        case EndpointIndependentFiltering: str = "Endpoint Independent Filtering"; break;
-        case AddressDependentFiltering: str = "Address Dependent Filtering"; break;
-        case AddressAndPortDependentFiltering: str = "Address and Port Dependent Filtering"; break;
+        case DirectConnectionFiltering:  str="Direct Mapping"; break; //直连
+        case EndpointIndependentFiltering: str = "Endpoint Independent Filtering"; break; //完全锥形过滤
+        case AddressDependentFiltering: str = "Address Dependent Filtering"; break; //地址受限型过滤
+        case AddressAndPortDependentFiltering: str = "Address and Port Dependent Filtering"; break; //地址和端口受限型过滤
         default: ASSERT(false); str = ""; break;
     }
 }
