@@ -67,7 +67,7 @@ public:
         map<string, PeerInfo *>::iterator end = _peersMap.end();
         for (; iter != end; ) {
             PeerInfo *info = iter->second;
-            if (!info || currentTimestamp - info->_timestamp > 1000*60*3) {
+            if (!info || currentTimestamp - info->_timestamp > 1000*30) {
                 //peer3分钟没有上报心跳则表示peer已经离线，需要移除
                 iter = _peersMap.erase(iter);
             } else {

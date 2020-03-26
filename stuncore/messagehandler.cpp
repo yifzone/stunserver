@@ -92,6 +92,7 @@ HRESULT CStunRequestHandler::ProcessRequestImpl()
         reader.GetStringAttributeByType(STUN_ATTRIBUTE_USERNAME, peerId, sizeof(peerId));
         reader.GetStringAttributeByType(STUN_ATTRIBUTE_PEERINFO, peerInfo, sizeof(peerInfo));
         if (*peerId && *peerInfo) {
+            Logging::LogMsg(LL_VERBOSE, "peer[%s] heartbeat: %s\n", peerId, peerInfo);
             PeersManager::shared()->updatePeer(string(peerId), string(peerInfo));
         }
     }
