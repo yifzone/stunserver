@@ -464,7 +464,7 @@ HRESULT CStunSocketThread::ProcessRequestAndSendResponse()
             
             sendret = ::sendto(sockout, msg->GetData(), msg->GetSize(), 0, peer->_mappedAddr.GetSockAddr(), peer->_mappedAddr.GetSockAddrLength());
             
-            Logging::LogMsg(LL_VERBOSE, "sendto peer for offer %d (err == %d)\n", sendret, errno);
+            Logging::LogMsg(LL_VERBOSE, "sendto peer[%s, %s] for offer[%s] %d (err == %d)\n", peer->_id.c_str(), peer->_mappedAddr.toStdString().c_str(), offerPeerId.c_str(), sendret, errno);
         }
     }
     PeersManager::shared()->_answerMap.clear();
