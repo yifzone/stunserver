@@ -48,7 +48,7 @@ private:
     
     static void* ThreadFunction(void* pThis);
     
-    CStunSocket* WaitForSocketData();
+    CStunSocket* WaitForSocketData(int32_t timeoutMS);
     
     CStunSocket* _arrSendSockets;  // matches CStunServer::_arrSockets
     std::vector<CStunSocket*> _socks; // sockets for receiving on

@@ -6,7 +6,7 @@ DEFINES := -DNDEBUG
 # CLANG compiler works fine
 # CXX := /usr/bin/clang++
 
-STANDARD_FLAGS := -Wall -Wuninitialized 
+STANDARD_FLAGS := -Wall -Wuninitialized
 
 RELEASE_FLAGS := -O2
 DEBUG_FLAGS := -g
@@ -30,10 +30,10 @@ endif
 
 %.hpp.gch: %.hpp
 	echo Building precompiled header: $@
-	$(COMPILE.cpp) $(INCLUDES) $(DEFINES) $(STANDARD_FLAGS) $(FLAVOR_FLAGS) $^
+	$(COMPILE.cpp) --std=c++11 $(INCLUDES) $(DEFINES) $(STANDARD_FLAGS) $(FLAVOR_FLAGS) $^
 
 %.o: %.cpp
-	$(COMPILE.cpp) $(INCLUDES) $(DEFINES) $(STANDARD_FLAGS) $(FLAVOR_FLAGS) $^
+	$(COMPILE.cpp) --std=c++11 $(INCLUDES) $(DEFINES) $(STANDARD_FLAGS) $(FLAVOR_FLAGS) $^
 
 # put "all" target first so that it is the default
 all:

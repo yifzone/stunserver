@@ -24,6 +24,8 @@
 #include "ratelimiter.h"
 #include "PeersManager.hpp"
 
+#define SOCKET_SELECT_INTERVAL 200
+
 
 CStunSocketThread::CStunSocketThread() :
 _arrSendSockets(), // zero-init
@@ -222,7 +224,7 @@ void* CStunSocketThread::ThreadFunction(void* pThis)
 }
 
 // returns an index into _socks, not _arrSockets
-CStunSocket* CStunSocketThread::WaitForSocketData()
+CStunSocket* CStunSocketThread::WaitForSocketData(int32_t timeoutMS)
 {
     fd_set set = {};
     int nHighestSockValue = 0;
@@ -230,6 +232,10 @@ CStunSocket* CStunSocketThread::WaitForSocketData()
     CStunSocket* pReadySocket = NULL;
     UNREFERENCED_VARIABLE(ret); // only referenced in ASSERT
     size_t nSocketCount = _socks.size();
+    
+    timeval tv = {};
+    tv.tv_usec = (timeoutMS % 1000) * 1000;
+    tv.tv_sec = timeoutMS / 1000;
     
     
     // rotation gives another socket priority in the next loop
@@ -296,10 +302,12 @@ void CStunSocketThread::Run()
 
     while (_fNeedToExit == false)
     {
-
+        //检测peer在线状态
+        PeersManager::shared()->checkInactivePeers(PeersManager::getMSTimestamp());
+        
         if (fMultiSocketMode)
         {
-            pSocket = WaitForSocketData();
+            pSocket = WaitForSocketData(SOCKET_SELECT_INTERVAL);
             
             if (_fNeedToExit)
             {
@@ -316,6 +324,21 @@ void CStunSocketThread::Run()
         }
         
         ASSERT(pSocket != NULL);
+        
+        if (!pSocket) {
+            continue;
+        }
+        
+        fd_set set;
+        timeval tv = {};
+        FD_ZERO(&set);
+        FD_SET(pSocket->GetSocketHandle(), &set);
+        tv.tv_usec = (SOCKET_SELECT_INTERVAL % 1000) * 1000;
+        tv.tv_sec = SOCKET_SELECT_INTERVAL / 1000;
+        size_t ret = select(pSocket->GetSocketHandle()+1, &set, NULL, NULL, &tv);
+        if (ret <= 0) {
+            continue;
+        }
 
         // now receive the data
         _spBufferIn->SetSize(0);
@@ -443,8 +466,7 @@ HRESULT CStunSocketThread::ProcessRequestAndSendResponse()
         }
     }
     PeersManager::shared()->_answerMap.clear();
-
-        
+    
 Cleanup:
     return hr;
 }
