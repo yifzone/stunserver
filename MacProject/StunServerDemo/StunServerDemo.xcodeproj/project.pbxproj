@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7AE3E2A4242B02EB0099F41C /* stringhelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E25A242B02EA0099F41C /* stringhelper.cpp */; };
+		7AE3E2A5242B02EB0099F41C /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E25B242B02EA0099F41C /* common.cpp */; };
+		7AE3E2A6242B02EB0099F41C /* fasthash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E25C242B02EA0099F41C /* fasthash.cpp */; };
+		7AE3E2A7242B02EB0099F41C /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E260242B02EA0099F41C /* Makefile */; };
+		7AE3E2A8242B02EB0099F41C /* refcountobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E262242B02EA0099F41C /* refcountobject.cpp */; };
+		7AE3E2A9242B02EB0099F41C /* getconsolewidth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E266242B02EA0099F41C /* getconsolewidth.cpp */; };
+		7AE3E2AA242B02EB0099F41C /* cmdlineparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E268242B02EA0099F41C /* cmdlineparser.cpp */; };
+		7AE3E2AB242B02EB0099F41C /* getmillisecondcounter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E26B242B02EA0099F41C /* getmillisecondcounter.cpp */; };
+		7AE3E2AC242B02EB0099F41C /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E26C242B02EA0099F41C /* logger.cpp */; };
+		7AE3E2AD242B02EB0099F41C /* prettyprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E26D242B02EA0099F41C /* prettyprint.cpp */; };
+		7AE3E2AE242B02EB0099F41C /* atomichelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E270242B02EA0099F41C /* atomichelpers.cpp */; };
+		7AE3E2AF242B02EB0099F41C /* polling.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E274242B02EA0099F41C /* polling.cpp */; };
+		7AE3E2B0242B02EB0099F41C /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E276242B02EA0099F41C /* Makefile */; };
+		7AE3E2B1242B02EB0099F41C /* adapters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E279242B02EA0099F41C /* adapters.cpp */; };
+		7AE3E2B2242B02EB0099F41C /* stunsocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E27A242B02EA0099F41C /* stunsocket.cpp */; };
+		7AE3E2B3242B02EB0099F41C /* recvfromex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E27C242B02EA0099F41C /* recvfromex.cpp */; };
+		7AE3E2B4242B02EB0099F41C /* resolvehostname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E27D242B02EA0099F41C /* resolvehostname.cpp */; };
+		7AE3E2B5242B02EB0099F41C /* ratelimiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E27E242B02EA0099F41C /* ratelimiter.cpp */; };
+		7AE3E2B7242B02EB0099F41C /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E282242B02EB0099F41C /* Makefile */; };
+		7AE3E2B8242B02EB0099F41C /* stunsocketthread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E283242B02EB0099F41C /* stunsocketthread.cpp */; };
+		7AE3E2B9242B02EB0099F41C /* tcpserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E286242B02EB0099F41C /* tcpserver.cpp */; };
+		7AE3E2BA242B02EB0099F41C /* stunconnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E287242B02EB0099F41C /* stunconnection.cpp */; };
+		7AE3E2BB242B02EB0099F41C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E28A242B02EB0099F41C /* main.cpp */; };
+		7AE3E2BC242B02EB0099F41C /* server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E28B242B02EB0099F41C /* server.cpp */; };
+		7AE3E2BD242B02EB0099F41C /* stunclientlogic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E28E242B02EB0099F41C /* stunclientlogic.cpp */; };
+		7AE3E2BE242B02EB0099F41C /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E291242B02EB0099F41C /* Makefile */; };
+		7AE3E2BF242B02EB0099F41C /* stunreader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E294242B02EB0099F41C /* stunreader.cpp */; };
+		7AE3E2C0242B02EB0099F41C /* buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E295242B02EB0099F41C /* buffer.cpp */; };
+		7AE3E2C1242B02EB0099F41C /* stunutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E299242B02EB0099F41C /* stunutils.cpp */; };
+		7AE3E2C2242B02EB0099F41C /* datastream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E29A242B02EB0099F41C /* datastream.cpp */; };
+		7AE3E2C3242B02EB0099F41C /* stunclienttests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E29C242B02EB0099F41C /* stunclienttests.cpp */; };
+		7AE3E2C4242B02EB0099F41C /* socketaddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E29D242B02EB0099F41C /* socketaddress.cpp */; };
+		7AE3E2C5242B02EB0099F41C /* messagehandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2A0242B02EB0099F41C /* messagehandler.cpp */; };
+		7AE3E2C6242B02EB0099F41C /* stunbuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2A2242B02EB0099F41C /* stunbuilder.cpp */; };
+		7AE3E2D7242B04590099F41C /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2CC242B04590099F41C /* Makefile */; };
+		7AE3E2DC242B31F70099F41C /* PeersManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2DA242B31F70099F41C /* PeersManager.cpp */; };
+		7AE3E2E2242C82E60099F41C /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2E0242C82E60099F41C /* cJSON.c */; };
+		7AE3E2E3242C82E60099F41C /* cJSON_Utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2E1242C82E60099F41C /* cJSON_Utils.c */; };
+		7AE3E2EA242C84B60099F41C /* PeerInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2E9242C84B50099F41C /* PeerInfo.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7AE3E24D242B02A00099F41C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7AE3E24F242B02A00099F41C /* StunServerDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StunServerDemo; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AE3E25A242B02EA0099F41C /* stringhelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringhelper.cpp; sourceTree = "<group>"; };
+		7AE3E25B242B02EA0099F41C /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
+		7AE3E25C242B02EA0099F41C /* fasthash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fasthash.cpp; sourceTree = "<group>"; };
+		7AE3E25D242B02EA0099F41C /* fasthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fasthash.h; sourceTree = "<group>"; };
+		7AE3E25E242B02EA0099F41C /* oshelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oshelper.h; sourceTree = "<group>"; };
+		7AE3E25F242B02EA0099F41C /* cmdlineparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmdlineparser.h; sourceTree = "<group>"; };
+		7AE3E260242B02EA0099F41C /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		7AE3E261242B02EA0099F41C /* commonincludes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = commonincludes.hpp; sourceTree = "<group>"; };
+		7AE3E262242B02EA0099F41C /* refcountobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = refcountobject.cpp; sourceTree = "<group>"; };
+		7AE3E263242B02EA0099F41C /* chkmacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chkmacros.h; sourceTree = "<group>"; };
+		7AE3E264242B02EA0099F41C /* atomichelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomichelpers.h; sourceTree = "<group>"; };
+		7AE3E265242B02EA0099F41C /* objectfactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objectfactory.h; sourceTree = "<group>"; };
+		7AE3E266242B02EA0099F41C /* getconsolewidth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = getconsolewidth.cpp; sourceTree = "<group>"; };
+		7AE3E267242B02EA0099F41C /* hresult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hresult.h; sourceTree = "<group>"; };
+		7AE3E268242B02EA0099F41C /* cmdlineparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cmdlineparser.cpp; sourceTree = "<group>"; };
+		7AE3E269242B02EA0099F41C /* refcountobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = refcountobject.h; sourceTree = "<group>"; };
+		7AE3E26A242B02EA0099F41C /* prettyprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prettyprint.h; sourceTree = "<group>"; };
+		7AE3E26B242B02EA0099F41C /* getmillisecondcounter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = getmillisecondcounter.cpp; sourceTree = "<group>"; };
+		7AE3E26C242B02EA0099F41C /* logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
+		7AE3E26D242B02EA0099F41C /* prettyprint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = prettyprint.cpp; sourceTree = "<group>"; };
+		7AE3E26E242B02EA0099F41C /* logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logger.h; sourceTree = "<group>"; };
+		7AE3E26F242B02EA0099F41C /* stringhelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringhelper.h; sourceTree = "<group>"; };
+		7AE3E270242B02EA0099F41C /* atomichelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atomichelpers.cpp; sourceTree = "<group>"; };
+		7AE3E272242B02EA0099F41C /* adapters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adapters.h; sourceTree = "<group>"; };
+		7AE3E273242B02EA0099F41C /* stunsocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stunsocket.h; sourceTree = "<group>"; };
+		7AE3E274242B02EA0099F41C /* polling.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = polling.cpp; sourceTree = "<group>"; };
+		7AE3E275242B02EA0099F41C /* ratelimiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ratelimiter.h; sourceTree = "<group>"; };
+		7AE3E276242B02EA0099F41C /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		7AE3E277242B02EA0099F41C /* recvfromex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recvfromex.h; sourceTree = "<group>"; };
+		7AE3E278242B02EA0099F41C /* polling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = polling.h; sourceTree = "<group>"; };
+		7AE3E279242B02EA0099F41C /* adapters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = adapters.cpp; sourceTree = "<group>"; };
+		7AE3E27A242B02EA0099F41C /* stunsocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stunsocket.cpp; sourceTree = "<group>"; };
+		7AE3E27B242B02EA0099F41C /* resolvehostname.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resolvehostname.h; sourceTree = "<group>"; };
+		7AE3E27C242B02EA0099F41C /* recvfromex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = recvfromex.cpp; sourceTree = "<group>"; };
+		7AE3E27D242B02EA0099F41C /* resolvehostname.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resolvehostname.cpp; sourceTree = "<group>"; };
+		7AE3E27E242B02EA0099F41C /* ratelimiter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ratelimiter.cpp; sourceTree = "<group>"; };
+		7AE3E280242B02EB0099F41C /* tcpserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcpserver.h; sourceTree = "<group>"; };
+		7AE3E282242B02EB0099F41C /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		7AE3E283242B02EB0099F41C /* stunsocketthread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stunsocketthread.cpp; sourceTree = "<group>"; };
+		7AE3E284242B02EB0099F41C /* stunconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stunconnection.h; sourceTree = "<group>"; };
+		7AE3E286242B02EB0099F41C /* tcpserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcpserver.cpp; sourceTree = "<group>"; };
+		7AE3E287242B02EB0099F41C /* stunconnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stunconnection.cpp; sourceTree = "<group>"; };
+		7AE3E288242B02EB0099F41C /* stunsocketthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stunsocketthread.h; sourceTree = "<group>"; };
+		7AE3E289242B02EB0099F41C /* server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = server.h; sourceTree = "<group>"; };
+		7AE3E28A242B02EB0099F41C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7AE3E28B242B02EB0099F41C /* server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = server.cpp; sourceTree = "<group>"; };
+		7AE3E28D242B02EB0099F41C /* socketaddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socketaddress.h; sourceTree = "<group>"; };
+		7AE3E28E242B02EB0099F41C /* stunclientlogic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stunclientlogic.cpp; sourceTree = "<group>"; };
+		7AE3E28F242B02EB0099F41C /* messagehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messagehandler.h; sourceTree = "<group>"; };
+		7AE3E290242B02EB0099F41C /* stunbuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stunbuilder.h; sourceTree = "<group>"; };
+		7AE3E291242B02EB0099F41C /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		7AE3E292242B02EB0099F41C /* stunauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stunauth.h; sourceTree = "<group>"; };
+		7AE3E293242B02EB0099F41C /* stunclientlogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stunclientlogic.h; sourceTree = "<group>"; };
+		7AE3E294242B02EB0099F41C /* stunreader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stunreader.cpp; sourceTree = "<group>"; };
+		7AE3E295242B02EB0099F41C /* buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buffer.cpp; sourceTree = "<group>"; };
+		7AE3E296242B02EB0099F41C /* stunutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stunutils.h; sourceTree = "<group>"; };
+		7AE3E297242B02EB0099F41C /* datastream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datastream.h; sourceTree = "<group>"; };
+		7AE3E298242B02EB0099F41C /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		7AE3E299242B02EB0099F41C /* stunutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stunutils.cpp; sourceTree = "<group>"; };
+		7AE3E29A242B02EB0099F41C /* datastream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = datastream.cpp; sourceTree = "<group>"; };
+		7AE3E29B242B02EB0099F41C /* stuntypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stuntypes.h; sourceTree = "<group>"; };
+		7AE3E29C242B02EB0099F41C /* stunclienttests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stunclienttests.cpp; sourceTree = "<group>"; };
+		7AE3E29D242B02EB0099F41C /* socketaddress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = socketaddress.cpp; sourceTree = "<group>"; };
+		7AE3E29E242B02EB0099F41C /* stunreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stunreader.h; sourceTree = "<group>"; };
+		7AE3E29F242B02EB0099F41C /* socketrole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socketrole.h; sourceTree = "<group>"; };
+		7AE3E2A0242B02EB0099F41C /* messagehandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = messagehandler.cpp; sourceTree = "<group>"; };
+		7AE3E2A1242B02EB0099F41C /* stuncore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stuncore.h; sourceTree = "<group>"; };
+		7AE3E2A2242B02EB0099F41C /* stunbuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stunbuilder.cpp; sourceTree = "<group>"; };
+		7AE3E2A3242B02EB0099F41C /* stunclienttests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stunclienttests.h; sourceTree = "<group>"; };
+		7AE3E2C8242B04590099F41C /* stunclient_lite.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stunclient_lite.txt; sourceTree = "<group>"; };
+		7AE3E2C9242B04590099F41C /* stunserver.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = stunserver.md; sourceTree = "<group>"; };
+		7AE3E2CA242B04590099F41C /* stunserver.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = stunserver.1; sourceTree = "<group>"; };
+		7AE3E2CB242B04590099F41C /* stunserver.txtcode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stunserver.txtcode; sourceTree = "<group>"; };
+		7AE3E2CC242B04590099F41C /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		7AE3E2CD242B04590099F41C /* stunclient_lite.txtcode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stunclient_lite.txtcode; sourceTree = "<group>"; };
+		7AE3E2CE242B04590099F41C /* stunserver_lite.txtcode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stunserver_lite.txtcode; sourceTree = "<group>"; };
+		7AE3E2CF242B04590099F41C /* makecodefile.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = makecodefile.sh; sourceTree = "<group>"; };
+		7AE3E2D0242B04590099F41C /* readme.src */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.src; sourceTree = "<group>"; };
+		7AE3E2D1242B04590099F41C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		7AE3E2D2242B04590099F41C /* stunclient.txtcode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stunclient.txtcode; sourceTree = "<group>"; };
+		7AE3E2D3242B04590099F41C /* stunclient.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = stunclient.md; sourceTree = "<group>"; };
+		7AE3E2D4242B04590099F41C /* stunserver_lite.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stunserver_lite.txt; sourceTree = "<group>"; };
+		7AE3E2D5242B04590099F41C /* xxdperl.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = xxdperl.pl; sourceTree = "<group>"; };
+		7AE3E2D6242B04590099F41C /* stunclient.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = stunclient.1; sourceTree = "<group>"; };
+		7AE3E2DA242B31F70099F41C /* PeersManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PeersManager.cpp; sourceTree = "<group>"; };
+		7AE3E2DB242B31F70099F41C /* PeersManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PeersManager.hpp; sourceTree = "<group>"; };
+		7AE3E2DE242C82E60099F41C /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
+		7AE3E2DF242C82E60099F41C /* cJSON_Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON_Utils.h; sourceTree = "<group>"; };
+		7AE3E2E0242C82E60099F41C /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
+		7AE3E2E1242C82E60099F41C /* cJSON_Utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON_Utils.c; sourceTree = "<group>"; };
+		7AE3E2E8242C84B50099F41C /* PeerInfo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PeerInfo.hpp; sourceTree = "<group>"; };
+		7AE3E2E9242C84B50099F41C /* PeerInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PeerInfo.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7AE3E24C242B02A00099F41C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7AE3E246242B02A00099F41C = {
+			isa = PBXGroup;
+			children = (
+				7AE3E2C7242B04590099F41C /* resources */,
+				7AE3E259242B02EA0099F41C /* common */,
+				7AE3E271242B02EA0099F41C /* networkutils */,
+				7AE3E27F242B02EB0099F41C /* server */,
+				7AE3E28C242B02EB0099F41C /* stuncore */,
+				7AE3E251242B02A00099F41C /* StunServerDemo */,
+				7AE3E250242B02A00099F41C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7AE3E250242B02A00099F41C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3E24F242B02A00099F41C /* StunServerDemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7AE3E251242B02A00099F41C /* StunServerDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StunServerDemo;
+			sourceTree = "<group>";
+		};
+		7AE3E259242B02EA0099F41C /* common */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3E2DD242C82E60099F41C /* cJSON */,
+				7AE3E25A242B02EA0099F41C /* stringhelper.cpp */,
+				7AE3E25B242B02EA0099F41C /* common.cpp */,
+				7AE3E25C242B02EA0099F41C /* fasthash.cpp */,
+				7AE3E25D242B02EA0099F41C /* fasthash.h */,
+				7AE3E25E242B02EA0099F41C /* oshelper.h */,
+				7AE3E25F242B02EA0099F41C /* cmdlineparser.h */,
+				7AE3E260242B02EA0099F41C /* Makefile */,
+				7AE3E261242B02EA0099F41C /* commonincludes.hpp */,
+				7AE3E262242B02EA0099F41C /* refcountobject.cpp */,
+				7AE3E263242B02EA0099F41C /* chkmacros.h */,
+				7AE3E264242B02EA0099F41C /* atomichelpers.h */,
+				7AE3E265242B02EA0099F41C /* objectfactory.h */,
+				7AE3E266242B02EA0099F41C /* getconsolewidth.cpp */,
+				7AE3E267242B02EA0099F41C /* hresult.h */,
+				7AE3E268242B02EA0099F41C /* cmdlineparser.cpp */,
+				7AE3E269242B02EA0099F41C /* refcountobject.h */,
+				7AE3E26A242B02EA0099F41C /* prettyprint.h */,
+				7AE3E26B242B02EA0099F41C /* getmillisecondcounter.cpp */,
+				7AE3E26C242B02EA0099F41C /* logger.cpp */,
+				7AE3E26D242B02EA0099F41C /* prettyprint.cpp */,
+				7AE3E26E242B02EA0099F41C /* logger.h */,
+				7AE3E26F242B02EA0099F41C /* stringhelper.h */,
+				7AE3E270242B02EA0099F41C /* atomichelpers.cpp */,
+			);
+			name = common;
+			path = ../../common;
+			sourceTree = "<group>";
+		};
+		7AE3E271242B02EA0099F41C /* networkutils */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3E272242B02EA0099F41C /* adapters.h */,
+				7AE3E273242B02EA0099F41C /* stunsocket.h */,
+				7AE3E274242B02EA0099F41C /* polling.cpp */,
+				7AE3E275242B02EA0099F41C /* ratelimiter.h */,
+				7AE3E276242B02EA0099F41C /* Makefile */,
+				7AE3E277242B02EA0099F41C /* recvfromex.h */,
+				7AE3E278242B02EA0099F41C /* polling.h */,
+				7AE3E279242B02EA0099F41C /* adapters.cpp */,
+				7AE3E27A242B02EA0099F41C /* stunsocket.cpp */,
+				7AE3E27B242B02EA0099F41C /* resolvehostname.h */,
+				7AE3E27C242B02EA0099F41C /* recvfromex.cpp */,
+				7AE3E27D242B02EA0099F41C /* resolvehostname.cpp */,
+				7AE3E27E242B02EA0099F41C /* ratelimiter.cpp */,
+			);
+			name = networkutils;
+			path = ../../networkutils;
+			sourceTree = "<group>";
+		};
+		7AE3E27F242B02EB0099F41C /* server */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3E280242B02EB0099F41C /* tcpserver.h */,
+				7AE3E282242B02EB0099F41C /* Makefile */,
+				7AE3E283242B02EB0099F41C /* stunsocketthread.cpp */,
+				7AE3E284242B02EB0099F41C /* stunconnection.h */,
+				7AE3E286242B02EB0099F41C /* tcpserver.cpp */,
+				7AE3E287242B02EB0099F41C /* stunconnection.cpp */,
+				7AE3E288242B02EB0099F41C /* stunsocketthread.h */,
+				7AE3E289242B02EB0099F41C /* server.h */,
+				7AE3E28A242B02EB0099F41C /* main.cpp */,
+				7AE3E28B242B02EB0099F41C /* server.cpp */,
+				7AE3E2E9242C84B50099F41C /* PeerInfo.cpp */,
+				7AE3E2E8242C84B50099F41C /* PeerInfo.hpp */,
+				7AE3E2DA242B31F70099F41C /* PeersManager.cpp */,
+				7AE3E2DB242B31F70099F41C /* PeersManager.hpp */,
+			);
+			name = server;
+			path = ../../server;
+			sourceTree = "<group>";
+		};
+		7AE3E28C242B02EB0099F41C /* stuncore */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3E28D242B02EB0099F41C /* socketaddress.h */,
+				7AE3E28E242B02EB0099F41C /* stunclientlogic.cpp */,
+				7AE3E28F242B02EB0099F41C /* messagehandler.h */,
+				7AE3E290242B02EB0099F41C /* stunbuilder.h */,
+				7AE3E291242B02EB0099F41C /* Makefile */,
+				7AE3E292242B02EB0099F41C /* stunauth.h */,
+				7AE3E293242B02EB0099F41C /* stunclientlogic.h */,
+				7AE3E294242B02EB0099F41C /* stunreader.cpp */,
+				7AE3E295242B02EB0099F41C /* buffer.cpp */,
+				7AE3E296242B02EB0099F41C /* stunutils.h */,
+				7AE3E297242B02EB0099F41C /* datastream.h */,
+				7AE3E298242B02EB0099F41C /* buffer.h */,
+				7AE3E299242B02EB0099F41C /* stunutils.cpp */,
+				7AE3E29A242B02EB0099F41C /* datastream.cpp */,
+				7AE3E29B242B02EB0099F41C /* stuntypes.h */,
+				7AE3E29C242B02EB0099F41C /* stunclienttests.cpp */,
+				7AE3E29D242B02EB0099F41C /* socketaddress.cpp */,
+				7AE3E29E242B02EB0099F41C /* stunreader.h */,
+				7AE3E29F242B02EB0099F41C /* socketrole.h */,
+				7AE3E2A0242B02EB0099F41C /* messagehandler.cpp */,
+				7AE3E2A1242B02EB0099F41C /* stuncore.h */,
+				7AE3E2A2242B02EB0099F41C /* stunbuilder.cpp */,
+				7AE3E2A3242B02EB0099F41C /* stunclienttests.h */,
+			);
+			name = stuncore;
+			path = ../../stuncore;
+			sourceTree = "<group>";
+		};
+		7AE3E2C7242B04590099F41C /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3E2C8242B04590099F41C /* stunclient_lite.txt */,
+				7AE3E2C9242B04590099F41C /* stunserver.md */,
+				7AE3E2CA242B04590099F41C /* stunserver.1 */,
+				7AE3E2CB242B04590099F41C /* stunserver.txtcode */,
+				7AE3E2CC242B04590099F41C /* Makefile */,
+				7AE3E2CD242B04590099F41C /* stunclient_lite.txtcode */,
+				7AE3E2CE242B04590099F41C /* stunserver_lite.txtcode */,
+				7AE3E2CF242B04590099F41C /* makecodefile.sh */,
+				7AE3E2D0242B04590099F41C /* readme.src */,
+				7AE3E2D1242B04590099F41C /* README */,
+				7AE3E2D2242B04590099F41C /* stunclient.txtcode */,
+				7AE3E2D3242B04590099F41C /* stunclient.md */,
+				7AE3E2D4242B04590099F41C /* stunserver_lite.txt */,
+				7AE3E2D5242B04590099F41C /* xxdperl.pl */,
+				7AE3E2D6242B04590099F41C /* stunclient.1 */,
+			);
+			name = resources;
+			path = ../../resources;
+			sourceTree = "<group>";
+		};
+		7AE3E2DD242C82E60099F41C /* cJSON */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3E2DE242C82E60099F41C /* cJSON.h */,
+				7AE3E2DF242C82E60099F41C /* cJSON_Utils.h */,
+				7AE3E2E0242C82E60099F41C /* cJSON.c */,
+				7AE3E2E1242C82E60099F41C /* cJSON_Utils.c */,
+			);
+			path = cJSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AE3E24E242B02A00099F41C /* StunServerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AE3E256242B02A00099F41C /* Build configuration list for PBXNativeTarget "StunServerDemo" */;
+			buildPhases = (
+				7AE3E24B242B02A00099F41C /* Sources */,
+				7AE3E24C242B02A00099F41C /* Frameworks */,
+				7AE3E24D242B02A00099F41C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StunServerDemo;
+			productName = StunServerDemo;
+			productReference = 7AE3E24F242B02A00099F41C /* StunServerDemo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7AE3E247242B02A00099F41C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = com.hunantv;
+				TargetAttributes = {
+					7AE3E24E242B02A00099F41C = {
+						CreatedOnToolsVersion = 11.2;
+					};
+				};
+			};
+			buildConfigurationList = 7AE3E24A242B02A00099F41C /* Build configuration list for PBXProject "StunServerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7AE3E246242B02A00099F41C;
+			productRefGroup = 7AE3E250242B02A00099F41C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AE3E24E242B02A00099F41C /* StunServerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AE3E24B242B02A00099F41C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AE3E2A7242B02EB0099F41C /* Makefile in Sources */,
+				7AE3E2B3242B02EB0099F41C /* recvfromex.cpp in Sources */,
+				7AE3E2C4242B02EB0099F41C /* socketaddress.cpp in Sources */,
+				7AE3E2AD242B02EB0099F41C /* prettyprint.cpp in Sources */,
+				7AE3E2C6242B02EB0099F41C /* stunbuilder.cpp in Sources */,
+				7AE3E2B2242B02EB0099F41C /* stunsocket.cpp in Sources */,
+				7AE3E2C2242B02EB0099F41C /* datastream.cpp in Sources */,
+				7AE3E2DC242B31F70099F41C /* PeersManager.cpp in Sources */,
+				7AE3E2A4242B02EB0099F41C /* stringhelper.cpp in Sources */,
+				7AE3E2E3242C82E60099F41C /* cJSON_Utils.c in Sources */,
+				7AE3E2B4242B02EB0099F41C /* resolvehostname.cpp in Sources */,
+				7AE3E2A5242B02EB0099F41C /* common.cpp in Sources */,
+				7AE3E2B8242B02EB0099F41C /* stunsocketthread.cpp in Sources */,
+				7AE3E2AA242B02EB0099F41C /* cmdlineparser.cpp in Sources */,
+				7AE3E2B9242B02EB0099F41C /* tcpserver.cpp in Sources */,
+				7AE3E2C3242B02EB0099F41C /* stunclienttests.cpp in Sources */,
+				7AE3E2B5242B02EB0099F41C /* ratelimiter.cpp in Sources */,
+				7AE3E2BA242B02EB0099F41C /* stunconnection.cpp in Sources */,
+				7AE3E2EA242C84B60099F41C /* PeerInfo.cpp in Sources */,
+				7AE3E2AE242B02EB0099F41C /* atomichelpers.cpp in Sources */,
+				7AE3E2D7242B04590099F41C /* Makefile in Sources */,
+				7AE3E2B7242B02EB0099F41C /* Makefile in Sources */,
+				7AE3E2BD242B02EB0099F41C /* stunclientlogic.cpp in Sources */,
+				7AE3E2AF242B02EB0099F41C /* polling.cpp in Sources */,
+				7AE3E2A8242B02EB0099F41C /* refcountobject.cpp in Sources */,
+				7AE3E2BC242B02EB0099F41C /* server.cpp in Sources */,
+				7AE3E2BB242B02EB0099F41C /* main.cpp in Sources */,
+				7AE3E2BF242B02EB0099F41C /* stunreader.cpp in Sources */,
+				7AE3E2C5242B02EB0099F41C /* messagehandler.cpp in Sources */,
+				7AE3E2C1242B02EB0099F41C /* stunutils.cpp in Sources */,
+				7AE3E2A6242B02EB0099F41C /* fasthash.cpp in Sources */,
+				7AE3E2B1242B02EB0099F41C /* adapters.cpp in Sources */,
+				7AE3E2AC242B02EB0099F41C /* logger.cpp in Sources */,
+				7AE3E2AB242B02EB0099F41C /* getmillisecondcounter.cpp in Sources */,
+				7AE3E2B0242B02EB0099F41C /* Makefile in Sources */,
+				7AE3E2C0242B02EB0099F41C /* buffer.cpp in Sources */,
+				7AE3E2BE242B02EB0099F41C /* Makefile in Sources */,
+				7AE3E2A9242B02EB0099F41C /* getconsolewidth.cpp in Sources */,
+				7AE3E2E2242C82E60099F41C /* cJSON.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7AE3E254242B02A00099F41C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7AE3E255242B02A00099F41C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7AE3E257242B02A00099F41C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHYHE776Y8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../resources\"";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = /Users/yifzone/boost_1_72_0;
+			};
+			name = Debug;
+		};
+		7AE3E258242B02A00099F41C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHYHE776Y8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../resources\"";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = /Users/yifzone/boost_1_72_0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7AE3E24A242B02A00099F41C /* Build configuration list for PBXProject "StunServerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AE3E254242B02A00099F41C /* Debug */,
+				7AE3E255242B02A00099F41C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AE3E256242B02A00099F41C /* Build configuration list for PBXNativeTarget "StunServerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AE3E257242B02A00099F41C /* Debug */,
+				7AE3E258242B02A00099F41C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7AE3E247242B02A00099F41C /* Project object */;
+}

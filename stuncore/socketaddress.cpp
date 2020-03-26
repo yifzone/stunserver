@@ -366,3 +366,44 @@ HRESULT CSocketAddress::GetLocalHost(uint16_t family, CSocketAddress* pAddr)
     return S_OK;
 }
 
+std::vector<std::string> stringSplit(const std::string& s, const std::string& delim)
+{
+    std::vector<std::string> elems;
+    size_t pos = 0;
+    size_t len = s.length();
+    size_t delim_len = delim.length();
+    if (delim_len == 0) return elems;
+    while (pos < len)
+    {
+        size_t find_pos = s.find(delim, pos);
+        if (find_pos == std::string::npos)
+        {
+            elems.push_back(s.substr(pos, len - pos));
+            break;
+        }
+        elems.push_back(s.substr(pos, find_pos - pos));
+        pos = find_pos + delim_len;
+    }
+    
+    return elems;
+}
+
+CSocketAddress CSocketAddress::fromStdString(const std::string &formatAddr) {
+    std::vector<std::string> elems = stringSplit(formatAddr, ":");
+    if (elems.size() != 2) {
+        return CSocketAddress();
+    }
+    
+    sockaddr_in addr;
+    addr.sin_family = AF_INET;
+    addr.sin_port = htons(atoi(elems[1].c_str()));
+    addr.sin_addr.s_addr = inet_addr(elems[0].c_str());
+    
+    return CSocketAddress(addr);
+}
+
+std::string CSocketAddress::toStdString() const {
+    std::string addrStr = "";
+    ToString(&addrStr);
+    return addrStr;
+}

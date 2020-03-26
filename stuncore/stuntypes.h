@@ -69,7 +69,9 @@ const uint16_t STUN_ATTRIBUTE_FINGERPRINT = 0x8028;
 const uint16_t STUN_ATTRIBUTE_RESPONSE_ORIGIN = 0x802b;
 const uint16_t STUN_ATTRIBUTE_OTHER_ADDRESS = 0x802c;
 
-
+const uint16_t STUN_ATTRIBUTE_STRING = 0xf001;
+const uint16_t STUN_ATTRIBUTE_PEERINFO = 0xf002;
+const uint16_t STUN_ATTRIBUTE_PEERSINFO = 0xf003;
 
 
 const uint16_t STUN_TRANSACTION_ID_LENGTH = 16;
@@ -102,6 +104,11 @@ enum StunMessageClass
 enum StunMessageType
 {
     StunMsgTypeBinding = 0x0001,
+    
+    StunMsgTypeMGHello = 0x0f01,
+    StunMsgTypeOffer = 0x0f02,
+    StunMsgTypeTask = 0x0f03,
+    
     StunMsgTypeInvalid = 0xffff
 };
 

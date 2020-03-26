@@ -75,6 +75,8 @@ public:
 
     void ToString(std::string* pStr) const;
     HRESULT ToStringBuffer(char* pszAddrBytes, size_t length) const;
+    std::string toStdString() const;
+    static CSocketAddress fromStdString(const std::string &formatAddr);
     
     static HRESULT GetLocalHost(uint16_t family, CSocketAddress* pAddr);
 

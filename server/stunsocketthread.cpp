@@ -22,6 +22,7 @@
 #include "stunsocketthread.h"
 #include "recvfromex.h"
 #include "ratelimiter.h"
+#include "PeersManager.hpp"
 
 
 CStunSocketThread::CStunSocketThread() :
@@ -379,6 +380,9 @@ HRESULT CStunSocketThread::ProcessRequestAndSendResponse()
     HRESULT hr = S_OK;
     int sendret = -1;
     int sockout = -1;
+    
+    map<string, list<PeerInfo *>>::iterator iter1;
+    map<string, list<PeerInfo *>>::iterator end1;
 
     // Reset the reader object and re-attach the buffer
     _reader.Reset();
@@ -406,6 +410,39 @@ HRESULT CStunSocketThread::ProcessRequestAndSendResponse()
     {
         Logging::LogMsg(LL_VERBOSE, "sendto returns %d (err == %d)\n", sendret, errno);
     }
+    
+    iter1 = PeersManager::shared()->_answerMap.begin();
+    end1 = PeersManager::shared()->_answerMap.end();
+    for (; iter1 != end1; ++iter1) {
+        string offerPeerId = iter1->first;
+        list<PeerInfo *> answerPeers = iter1->second;
+        
+        //发送指示给将要anwser的peer
+        list<PeerInfo *>::iterator iter = answerPeers.begin();
+        list<PeerInfo *>::iterator end = answerPeers.end();
+        for (; iter != end; ++iter) {
+            PeerInfo *peer = *iter;
+            if (!peer) {
+                continue;
+            }
+            
+            CStunMessageBuilder builder2;
+            CRefCountedBuffer msg(new CBuffer(MAX_STUN_MESSAGE_SIZE));
+            builder2.GetStream().Attach(msg, true);
+            
+            builder2.AddHeader(StunMsgTypeOffer, StunMsgClassIndication);
+            StunTransactionId tempTransid;
+            builder2.AddRandomTransactionId(&tempTransid);
+            builder2.AddUserName("STUN-SERVER");
+            PeerInfo *offerPeer = PeersManager::shared()->queryPeer(offerPeerId);
+            string offerPeerJson = offerPeer->toJsonString();
+            builder2.AddAttribute(STUN_ATTRIBUTE_PEERINFO, offerPeerJson.c_str(), offerPeerJson.length());
+            builder2.FixLengthField();
+            
+            ::sendto(sockout, msg->GetData(), msg->GetSize(), 0, peer->_mappedAddr.GetSockAddr(), peer->_mappedAddr.GetSockAddrLength());
+        }
+    }
+    PeersManager::shared()->_answerMap.clear();
 
         
 Cleanup:

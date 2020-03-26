@@ -15,7 +15,9 @@
 */
 
 #include "commonincludes.hpp"
+#ifndef __APPLE__
 #include <openssl/hmac.h>
+#endif
 #include "stuncore.h"
 #include "stunsocket.h"
 #include "stunsocketthread.h"

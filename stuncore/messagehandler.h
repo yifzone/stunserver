@@ -84,6 +84,7 @@ private:
     void BuildErrorResponse();
     HRESULT ValidateAuth();
     HRESULT ProcessRequestImpl();
+    HRESULT ProcessOfferRequest();
     
     // input
     IStunAuth* _pAuth;

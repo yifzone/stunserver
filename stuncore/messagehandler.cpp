@@ -19,7 +19,7 @@
 #include "stuncore.h"
 #include "messagehandler.h"
 #include "socketrole.h"
-
+#include "PeersManager.hpp"
 
 CStunRequestHandler::CStunRequestHandler() :
 _pAuth(NULL),
@@ -85,13 +85,23 @@ HRESULT CStunRequestHandler::ProcessRequestImpl()
     
     uint16_t responseport = 0;
     
+    if (reader.GetMessageClass() == StunMsgClassIndication && reader.GetMessageType() == StunMsgTypeBinding) {
+        //peer心跳，存储更新peer信息
+        char peerId[64] = {0};
+        char peerInfo[512] = {0};
+        reader.GetStringAttributeByType(STUN_ATTRIBUTE_USERNAME, peerId, sizeof(peerId));
+        reader.GetStringAttributeByType(STUN_ATTRIBUTE_PEERINFO, peerInfo, sizeof(peerInfo));
+        if (*peerId && *peerInfo) {
+            PeersManager::shared()->updatePeer(string(peerId), string(peerInfo));
+        }
+    }
+    
     // ignore anything that is not a request (with no response)
     ChkIf(reader.GetMessageClass() != StunMsgClassRequest, E_FAIL);
     
     // pre-prep the error message in case we wind up needing senderrorto send it
     _error.msgtype = reader.GetMessageType();
-    _error.msgclass = StunMsgClassFailureResponse;
-    
+    _error.msgclass = StunMsgClassFailureResponse;    
     
     reader.GetTransactionId(&_transid);
     _fLegacyMode = reader.IsMessageLegacyFormat();
@@ -118,7 +128,7 @@ HRESULT CStunRequestHandler::ProcessRequestImpl()
 
     if (_error.errorcode == 0)
     {
-       if (reader.GetMessageType() != StunMsgTypeBinding)
+       if (reader.GetMessageType() != StunMsgTypeBinding && reader.GetMessageType() != StunMsgTypeOffer)
        {
             // we're going to send back an error response for requests that are not binding requests
             _error.errorcode = STUN_ERROR_BADREQUEST; // invalid request
@@ -140,7 +150,12 @@ HRESULT CStunRequestHandler::ProcessRequestImpl()
     
     if (_error.errorcode == 0)
     {
-        hrResult = ProcessBindingRequest();
+        if (reader.GetMessageType() == StunMsgTypeBinding) {
+            hrResult = ProcessBindingRequest();
+        } else if (reader.GetMessageType() == StunMsgTypeOffer) {
+            hrResult = ProcessOfferRequest();
+        }
+        
         if (FAILED(hrResult) && (_error.errorcode == 0))
         {
             _error.errorcode = STUN_ERROR_BADREQUEST;
@@ -362,6 +377,32 @@ HRESULT CStunRequestHandler::ProcessBindingRequest()
     return S_OK;
 }
 
+HRESULT CStunRequestHandler::ProcessOfferRequest() {
+    CStunMessageReader& reader = *(_pMsgIn->pReader);
+    CStunMessageBuilder builder;
+    builder.GetStream().Attach(_pMsgOut->spBufferOut, true);
+    
+    char peerId[64] = {0};
+    reader.GetStringAttributeByType(STUN_ATTRIBUTE_USERNAME, peerId, sizeof(peerId));
+    if (!*peerId) {
+        _error.errorcode = STUN_ERROR_BADREQUEST;
+        return E_FAIL;
+    }
+    
+    list<PeerInfo *> peers = PeersManager::shared()->getPeersForOffer(peerId);
+    string peersJson = PeersManager::shared()->peersToJsonString(peers);
+    
+    builder.AddHeader(StunMsgTypeOffer, StunMsgClassSuccessResponse);
+    builder.AddTransactionId(_transid);
+    builder.AddUserName("STUN-SERVER");
+    builder.AddAttribute(STUN_ATTRIBUTE_PEERSINFO, peersJson.c_str(), peersJson.length());
+    builder.FixLengthField();
+    
+    PeersManager::shared()->pushAnswerSession(peerId, peers);
+    
+    return S_OK;
+}
+
 
 HRESULT CStunRequestHandler::ValidateAuth()
 {
@@ -462,4 +503,3 @@ bool CStunRequestHandler::IsIPAddressZeroOrInvalid(SocketRole role)
     bool fValid = HasAddress(role) && (_pAddrSet->set[role].addr.IsIPAddressZero()==false);
     return !fValid;
 }
-
