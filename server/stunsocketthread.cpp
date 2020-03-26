@@ -381,8 +381,8 @@ HRESULT CStunSocketThread::ProcessRequestAndSendResponse()
     int sendret = -1;
     int sockout = -1;
     
-    map<string, list<PeerInfo *>>::iterator iter1;
-    map<string, list<PeerInfo *>>::iterator end1;
+    map<string, list<PeerInfo *> >::iterator iter1;
+    map<string, list<PeerInfo *> >::iterator end1;
 
     // Reset the reader object and re-attach the buffer
     _reader.Reset();

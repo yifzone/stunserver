@@ -21,7 +21,7 @@
 using namespace std;
 class PeersManager {
 public:
-    map<string, list<PeerInfo *>> _answerMap;
+    map<string, list<PeerInfo *> > _answerMap;
     
     static PeersManager *shared() {
         static PeersManager instance;

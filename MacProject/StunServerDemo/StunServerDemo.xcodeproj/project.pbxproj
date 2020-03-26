@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A10F965242CA02F0094AAAD /* cJSON_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A10F961242CA02E0094AAAD /* cJSON_Utils.cpp */; };
+		7A10F966242CA02F0094AAAD /* cJSON.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A10F962242CA02F0094AAAD /* cJSON.cpp */; };
 		7AE3E2A4242B02EB0099F41C /* stringhelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E25A242B02EA0099F41C /* stringhelper.cpp */; };
 		7AE3E2A5242B02EB0099F41C /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E25B242B02EA0099F41C /* common.cpp */; };
 		7AE3E2A6242B02EB0099F41C /* fasthash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E25C242B02EA0099F41C /* fasthash.cpp */; };
@@ -43,8 +45,6 @@
 		7AE3E2C6242B02EB0099F41C /* stunbuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2A2242B02EB0099F41C /* stunbuilder.cpp */; };
 		7AE3E2D7242B04590099F41C /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2CC242B04590099F41C /* Makefile */; };
 		7AE3E2DC242B31F70099F41C /* PeersManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2DA242B31F70099F41C /* PeersManager.cpp */; };
-		7AE3E2E2242C82E60099F41C /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2E0242C82E60099F41C /* cJSON.c */; };
-		7AE3E2E3242C82E60099F41C /* cJSON_Utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2E1242C82E60099F41C /* cJSON_Utils.c */; };
 		7AE3E2EA242C84B60099F41C /* PeerInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3E2E9242C84B50099F41C /* PeerInfo.cpp */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +61,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A10F961242CA02E0094AAAD /* cJSON_Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cJSON_Utils.cpp; sourceTree = "<group>"; };
+		7A10F962242CA02F0094AAAD /* cJSON.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cJSON.cpp; sourceTree = "<group>"; };
+		7A10F963242CA02F0094AAAD /* cJSON_Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON_Utils.h; sourceTree = "<group>"; };
+		7A10F964242CA02F0094AAAD /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
 		7AE3E24F242B02A00099F41C /* StunServerDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StunServerDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE3E25A242B02EA0099F41C /* stringhelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringhelper.cpp; sourceTree = "<group>"; };
 		7AE3E25B242B02EA0099F41C /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
@@ -148,10 +152,6 @@
 		7AE3E2D6242B04590099F41C /* stunclient.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = stunclient.1; sourceTree = "<group>"; };
 		7AE3E2DA242B31F70099F41C /* PeersManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PeersManager.cpp; sourceTree = "<group>"; };
 		7AE3E2DB242B31F70099F41C /* PeersManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PeersManager.hpp; sourceTree = "<group>"; };
-		7AE3E2DE242C82E60099F41C /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
-		7AE3E2DF242C82E60099F41C /* cJSON_Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON_Utils.h; sourceTree = "<group>"; };
-		7AE3E2E0242C82E60099F41C /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
-		7AE3E2E1242C82E60099F41C /* cJSON_Utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON_Utils.c; sourceTree = "<group>"; };
 		7AE3E2E8242C84B50099F41C /* PeerInfo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PeerInfo.hpp; sourceTree = "<group>"; };
 		7AE3E2E9242C84B50099F41C /* PeerInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PeerInfo.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,7 +198,10 @@
 		7AE3E259242B02EA0099F41C /* common */ = {
 			isa = PBXGroup;
 			children = (
-				7AE3E2DD242C82E60099F41C /* cJSON */,
+				7A10F961242CA02E0094AAAD /* cJSON_Utils.cpp */,
+				7A10F963242CA02F0094AAAD /* cJSON_Utils.h */,
+				7A10F962242CA02F0094AAAD /* cJSON.cpp */,
+				7A10F964242CA02F0094AAAD /* cJSON.h */,
 				7AE3E25A242B02EA0099F41C /* stringhelper.cpp */,
 				7AE3E25B242B02EA0099F41C /* common.cpp */,
 				7AE3E25C242B02EA0099F41C /* fasthash.cpp */,
@@ -261,10 +264,6 @@
 				7AE3E289242B02EB0099F41C /* server.h */,
 				7AE3E28A242B02EB0099F41C /* main.cpp */,
 				7AE3E28B242B02EB0099F41C /* server.cpp */,
-				7AE3E2E9242C84B50099F41C /* PeerInfo.cpp */,
-				7AE3E2E8242C84B50099F41C /* PeerInfo.hpp */,
-				7AE3E2DA242B31F70099F41C /* PeersManager.cpp */,
-				7AE3E2DB242B31F70099F41C /* PeersManager.hpp */,
 			);
 			name = server;
 			path = ../../server;
@@ -273,6 +272,10 @@
 		7AE3E28C242B02EB0099F41C /* stuncore */ = {
 			isa = PBXGroup;
 			children = (
+				7AE3E2E9242C84B50099F41C /* PeerInfo.cpp */,
+				7AE3E2E8242C84B50099F41C /* PeerInfo.hpp */,
+				7AE3E2DA242B31F70099F41C /* PeersManager.cpp */,
+				7AE3E2DB242B31F70099F41C /* PeersManager.hpp */,
 				7AE3E28D242B02EB0099F41C /* socketaddress.h */,
 				7AE3E28E242B02EB0099F41C /* stunclientlogic.cpp */,
 				7AE3E28F242B02EB0099F41C /* messagehandler.h */,
@@ -322,17 +325,6 @@
 			);
 			name = resources;
 			path = ../../resources;
-			sourceTree = "<group>";
-		};
-		7AE3E2DD242C82E60099F41C /* cJSON */ = {
-			isa = PBXGroup;
-			children = (
-				7AE3E2DE242C82E60099F41C /* cJSON.h */,
-				7AE3E2DF242C82E60099F41C /* cJSON_Utils.h */,
-				7AE3E2E0242C82E60099F41C /* cJSON.c */,
-				7AE3E2E1242C82E60099F41C /* cJSON_Utils.c */,
-			);
-			path = cJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,9 +393,9 @@
 				7AE3E2C2242B02EB0099F41C /* datastream.cpp in Sources */,
 				7AE3E2DC242B31F70099F41C /* PeersManager.cpp in Sources */,
 				7AE3E2A4242B02EB0099F41C /* stringhelper.cpp in Sources */,
-				7AE3E2E3242C82E60099F41C /* cJSON_Utils.c in Sources */,
 				7AE3E2B4242B02EB0099F41C /* resolvehostname.cpp in Sources */,
 				7AE3E2A5242B02EB0099F41C /* common.cpp in Sources */,
+				7A10F965242CA02F0094AAAD /* cJSON_Utils.cpp in Sources */,
 				7AE3E2B8242B02EB0099F41C /* stunsocketthread.cpp in Sources */,
 				7AE3E2AA242B02EB0099F41C /* cmdlineparser.cpp in Sources */,
 				7AE3E2B9242B02EB0099F41C /* tcpserver.cpp in Sources */,
@@ -417,6 +409,7 @@
 				7AE3E2BD242B02EB0099F41C /* stunclientlogic.cpp in Sources */,
 				7AE3E2AF242B02EB0099F41C /* polling.cpp in Sources */,
 				7AE3E2A8242B02EB0099F41C /* refcountobject.cpp in Sources */,
+				7A10F966242CA02F0094AAAD /* cJSON.cpp in Sources */,
 				7AE3E2BC242B02EB0099F41C /* server.cpp in Sources */,
 				7AE3E2BB242B02EB0099F41C /* main.cpp in Sources */,
 				7AE3E2BF242B02EB0099F41C /* stunreader.cpp in Sources */,
@@ -430,7 +423,6 @@
 				7AE3E2C0242B02EB0099F41C /* buffer.cpp in Sources */,
 				7AE3E2BE242B02EB0099F41C /* Makefile in Sources */,
 				7AE3E2A9242B02EB0099F41C /* getconsolewidth.cpp in Sources */,
-				7AE3E2E2242C82E60099F41C /* cJSON.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

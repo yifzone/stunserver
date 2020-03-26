@@ -1,7 +1,7 @@
 include ../common.inc
 
 PROJECT_TARGET := libstuncore.a
-PROJECT_OBJS := buffer.o datastream.o messagehandler.o socketaddress.o stunbuilder.o stunclientlogic.o stunclienttests.o stunreader.o stunutils.o
+PROJECT_OBJS := buffer.o datastream.o messagehandler.o socketaddress.o stunbuilder.o stunclientlogic.o stunclienttests.o stunreader.o stunutils.o PeerInfo.o PeersManager.o
 INCLUDES := $(BOOST_INCLUDE) $(OPENSSL_INCLUDE) -I../common
 
 all: $(PROJECT_TARGET)
