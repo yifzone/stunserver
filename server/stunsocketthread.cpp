@@ -462,7 +462,9 @@ HRESULT CStunSocketThread::ProcessRequestAndSendResponse()
             builder2.AddAttribute(STUN_ATTRIBUTE_PEERINFO, offerPeerJson.c_str(), offerPeerJson.length());
             builder2.FixLengthField();
             
-            ::sendto(sockout, msg->GetData(), msg->GetSize(), 0, peer->_mappedAddr.GetSockAddr(), peer->_mappedAddr.GetSockAddrLength());
+            sendret = ::sendto(sockout, msg->GetData(), msg->GetSize(), 0, peer->_mappedAddr.GetSockAddr(), peer->_mappedAddr.GetSockAddrLength());
+            
+            Logging::LogMsg(LL_VERBOSE, "sendto peer for offer %d (err == %d)\n", sendret, errno);
         }
     }
     PeersManager::shared()->_answerMap.clear();
